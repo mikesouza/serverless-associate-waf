@@ -1,0 +1,37 @@
+{
+  "name": "serverless-associate-waf",
+  "version": "1.0.0",
+  "description": "Associate a regional WAF with the AWS API Gateway used by your Serverless stack.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeSouza/serverless-associate-waf.git"
+  },
+  "keywords": [
+    "serverless",
+    "serverless framework",
+    "serverless plugin",
+    "serverless plugins",
+    "amazon web services",
+    "aws",
+    "aws api gateway",
+    "api gateway",
+    "apigateway",
+    "aws waf",
+    "waf"
+  ],
+  "author": "Mike Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeSouza/serverless-associate-waf/issues"
+  },
+  "homepage": "https://github.com/MikeSouza/serverless-associate-waf#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
