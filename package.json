@@ -6,7 +6,9 @@
   "directories": {
     "lib": "lib"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jest --env node --coverage"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MikeSouza/serverless-associate-waf.git"
@@ -30,7 +32,10 @@
     "url": "https://github.com/MikeSouza/serverless-associate-waf/issues"
   },
   "homepage": "https://github.com/MikeSouza/serverless-associate-waf#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "serverless": "^1.37.1"
+  },
   "dependencies": {
     "chalk": "^2.4.2"
   }
