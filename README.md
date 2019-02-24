@@ -1,5 +1,8 @@
 # serverless-associate-waf
 
+[![Build Status](https://travis-ci.org/MikeSouza/serverless-associate-waf.svg?branch=master)](https://travis-ci.org/MikeSouza/serverless-associate-waf)
+[![Coverage Status](https://coveralls.io/repos/github/MikeSouza/serverless-associate-waf/badge.svg?branch=master)](https://coveralls.io/github/MikeSouza/serverless-associate-waf?branch=master)
+
 Associate a regional WAF with the AWS API Gateway used by your Serverless stack.
 
 ## Install

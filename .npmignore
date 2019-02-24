@@ -1,3 +1,6 @@
-.editorconfig
 coverage/
+
+.editorconfig
+.travis.yml
+
 *.tgz
