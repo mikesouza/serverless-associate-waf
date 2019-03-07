@@ -32,7 +32,7 @@ custom:
 |----------|----------|----------|---------|----------------------------------------------------------------|
 | `name`   |  `true`  | `string` |         | The name of the regional WAF to associate the API Gateway with |
 
-### Disssociating a Regional WAF from the API Gateway
+### Disassociating a Regional WAF from the API Gateway
 
 Remove the `associateWaf` element from your custom configurtation and deploy the application. The plugin must stay in the plugins list of `serverless.yml` in order for the WAF to be disassociated.
 
