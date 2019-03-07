@@ -34,7 +34,7 @@ custom:
 
 ### Disssociating a Regional WAF from the API Gateway
 
-Remove the `associateWaf` element from your custom configurtation and deploy the application. The plugin must stay in the plugins list of `serverless.yml` in order for the WAS to be disassociated.
+Remove the `associateWaf` element from your custom configurtation and deploy the application. The plugin must stay in the plugins list of `serverless.yml` in order for the WAF to be disassociated.
 
 ## Usage
 
