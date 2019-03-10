@@ -33,6 +33,10 @@
     "url": "https://github.com/MikeSouza/serverless-associate-waf/issues"
   },
   "homepage": "https://github.com/MikeSouza/serverless-associate-waf#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "devDependencies": {
     "coveralls": "^3.0.3",
     "jest": "^24.1.0",
