@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "11.10.1"
-  - 'lts/*'
+  - "node"
+  - "lts/*"
 cache: npm
 jobs:
   include:
@@ -10,7 +10,25 @@ jobs:
       script: npm install
     - stage: test
       name: "Unit Tests + Coverage"
-      script: npm run coveralls
+      script:
+        - npm test
+        - echo "Report Coverage..."
+        - npm run coveralls
+    - stage: publish
+      name: "Publish to NPM"
+      node_js: 'node'
+      script: echo "Publishing to NPM..."
+      deploy:
+        provider: npm
+        email: contact@michael-souza.com
+        api_key:
+          secure: UrwsyB+nJpAs3jGwSdtngOIE58Q+eL+MS74CiclymeHB1Rwcng42PqhMh/Prqr0xXu7Tao/vJmfRfHDGTFU3PGmbu/qt08DmLzKRbwedRtJLE9mUStLZ3fP3yHpAnZsmthsY1Q/cNl6142wzYEDlIw780ywtzoXdLqKOQgMZyaqqCdziX7qGwUBUC2pazFXiPJ69CEd66YeX7X7dBhXhFgpgVinlEzjBCo+dWMzAB9HyZBljAtk5TKkvtDhYUQ+Z5rWqnH1M+VrxsIPhgQuxl0ff5i7I6MNb+4Ejx5z1voEvFGBAIhhT0MYe/PqT/wgnpNhJ8VEV1dW59dXeiZBwxqfka1jVFy9h+cvuCJwT1lMOjqmdk/RRsuxKBP9YWi8UrAUpIrHBH0/VoOKTO4SyeOXZTbcVgD5MDkx+sT6bBrzA0aw5zKwaj82KUMbD0jL6x23HFwl65WgMRhXLTKdZfU0hTiMq2zeGTfwYtMeHdFiAdlXRXqfQYB8cSB/kQypf5dBRb6kSdr0Q11pos25atlacSkNdXdhNQNZuF4P/uaPts2uOI2xukRC75/MaZVqgKXZD8WzbK+KvCG8dcFwn3o125ogaafvHQ2/YiKb/AH0JjM0Ih35i7sLwjW5zMTl993CedRbOFH/kfo6Za3J49rzQJ8mfVNJEP+/PlX8/ngA=
+        on:
+          branch: master
+          tags: true
+          condition: -z $SKIP_PUBLISH
 stages:
   - install
   - test
+  - publish
+
