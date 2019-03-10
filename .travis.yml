@@ -9,7 +9,10 @@ jobs:
       name: "Install Dependencies"
       script: npm install
     - stage: test
-      name: "Unit Tests + Coverage"
+      name: Unit Tests
+      script: npm test
+    - stage: coverage
+      name: "Report Coverage"
       script: npm run coveralls
 stages:
   - install
