@@ -29,10 +29,10 @@ custom:
     version: Regional #(optional) Regional | V2
 ```
 
-| Property | Required | Type     | Default   | Description                                                    |
-|----------|----------|----------|-----------|----------------------------------------------------------------|
-| `name`   |  `true`  | `string` |           | The name of the regional WAF to associate the API Gateway with |
-| `version`|  `false` | `string` | `Regional`| The AWS Waf version to be used|
+| Property | Required | Type     | Default | Description                                                    |
+|----------|----------|----------|---------|----------------------------------------------------------------|
+| `name`   |  `true`  | `string` |         | The name of the regional WAF to associate the API Gateway with |
+| `version`|  `false` | `string` | `Regional`| The AWS WAF version to be used|
 
 ### Disassociating a Regional WAF from the API Gateway
 
