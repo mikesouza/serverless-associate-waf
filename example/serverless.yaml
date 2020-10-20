@@ -1,0 +1,33 @@
+service: test-serverless-associate-waf
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'development'}
+  region: ${opt:region, "${env:AWS_REGION, 'us-east-1'}"}
+  deploymentBucket:
+    name: test-serverless-associate-waf-${self:provider.region}-${self:provider.stage}
+    serverSideEncryption: AES256
+  deploymentPrefix: ${opt:deploymentPrefix, 'serverless'}
+  endpointType: regional
+  stackPolicy:
+    - {Effect: Allow, Principal: "*", Action: "Update:*", Resource: "*"}
+
+plugins:
+  - serverless-deployment-bucket
+  - serverless-associate-waf
+
+custom:
+  associateWaf:
+    name: someWafName
+
+  deploymentBucket:
+    versioning: false
+
+functions:
+  status:
+    handler: status.handler
+    events:
+      - http:
+          path: /status
+          method: GET

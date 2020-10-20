@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "./node_modules/.bin/sls deploy"
+  },
+  "devDependencies": {
+    "serverless": "^2.8.0",
+    "serverless-deployment-bucket": "^1.2.0"
+  }
+}
