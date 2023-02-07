@@ -1,6 +1,6 @@
 {
   "name": "serverless-associate-waf",
-  "version": "1.2.1",
+  "version": "1.2.1-rmd.1",
   "description": "Associate a regional WAF with the AWS API Gateway used by your Serverless stack.",
   "main": "lib/index.js",
   "directories": {
